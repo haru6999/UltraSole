@@ -21,3 +21,24 @@ new Vue({
       );
     }
   })
+
+var auto = $(document.getElementById('auto'));
+var manual = $(document.getElementById('manual'));
+
+$('#auto').click(function(){
+  $('#auto').css({
+    'background-color': '#4169e1'
+  });
+  $('#manual').css({
+    'background-color': '#9daee0'
+  });
+});
+
+$('#manual').click(function(){
+  $('#auto').css({
+    'background-color': '#9daee0'
+  });
+  $('#manual').css({
+    'background-color': '#4169e1'
+  });
+});

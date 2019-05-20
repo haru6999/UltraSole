@@ -5,36 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>UltraSole</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   </head>
   <body>
     <main>
 
-        <script src="https://unpkg.com/vue"></script>
+      <script src="https://unpkg.com/vue"></script>
 
-        <div id="app">
-            <h1>{{ message }}</h1>
-            <div class="soles">
-        
-            <div class="sole" v-for="sole in soles">
-                <div class="info">
-                <div class="title"><i class="sole icon"></i> {{sole.time}}</div>
-                <div class="review">{{sole.value}}</div>
-                </div>
-                <div class="rate">
-                <div class="ui statistics">
-                    <div class="statistic">
-                    <div class="value"><i class="star icon"></i> {{sole.value}} </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-        
-            </div>
+      <!-- <div id="app">
+          <h1>{{ message }}</h1>
+          <div class="soles">
+      
+          <div class="sole" v-for="sole in soles">
+              <div class="info">
+              <div class="title"><i class="sole icon"></i> {{sole.time}}</div>
+              <div class="review">{{sole.value}}</div>
+              </div>
+              <div class="rate">
+              <div class="ui statistics">
+                  <div class="statistic">
+                  <div class="value"><i class="star icon"></i> {{sole.value}} </div>
+                  </div>
+              </div>
+              </div>
+          </div>
+      
+          </div>
+      </div>
+       -->
+      
+      <!-- シート１ -->
+      <div class="seat seat1">
+        <div class="button1">
+          <button id="auto">オートモード</button><button id="manual">マニュアル</button>
+          <p>次の調整まであと 100秒 </p>
         </div>
-        
-        
+      </div>
+       
+      <!-- シート２ -->
+      <div class="seat seat2">
+
+      </div>
+      <!-- シート３ -->
+      <div class="seat seat3">
+
+      </div>
 
     </main>
+    <footer>
+      <button id="left"><i class="fas fa-shoe-prints"></i></button><button id="center"></button><button id="right"></button>
+    </footer>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="index.js"></script>
   </body>
