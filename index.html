@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>UltraSole</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+
+        <script src="https://unpkg.com/vue"></script>
+
+        <div id="app">
+            <h1>{{ message }}</h1>
+            <div class="soles">
+        
+            <div class="sole" v-for="sole in soles">
+                <div class="info">
+                <div class="title"><i class="sole icon"></i> {{sole.time}}</div>
+                <div class="review">{{sole.value}}</div>
+                </div>
+                <div class="rate">
+                <div class="ui statistics">
+                    <div class="statistic">
+                    <div class="value"><i class="star icon"></i> {{sole.value}} </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        
+            </div>
+        </div>
+        
+        
+
+    </main>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
