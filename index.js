@@ -22,6 +22,8 @@ new Vue({
     }
   })
 
+
+jQuery(function($){
 // シート１
 $('#auto').click(function(){
   $('#auto').css({
@@ -125,4 +127,7 @@ $('#mylist').click(function(){
   $('.mylist2').css({
     'display':'inline'
   });
+});
+
+
 });
