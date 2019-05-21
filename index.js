@@ -32,6 +32,12 @@ $('#auto').click(function(){
   $('#manual').css({
     'background-color': '#9daee0'
   });
+  $('#autoseat').css({
+    'display':'inline'
+  });
+  $('#manualseat').css({
+    'display':'none'
+  });
 });
 
 $('#manual').click(function(){
@@ -40,5 +46,74 @@ $('#manual').click(function(){
   });
   $('#manual').css({
     'background-color': '#4169e1'
+  });
+  $('#autoseat').css({
+    'display':'none'
+  });
+  $('#manualseat').css({
+    'display':'inline'
+  });
+});
+
+$('#left').click(function(){
+  $('#left').css({
+    'color':'#4169e1'
+  });
+  $('#center').css({
+    'color':'#858585'
+  });
+  $('#right').css({
+    'color':'#858585'
+  });
+  $('#seat1').css({
+    'display':'inline'
+  });
+  $('#seat2').css({
+    'display':'none'
+  });
+  $('#seat3').css({
+    'display':'none'
+  });
+});
+
+$('#center').click(function(){
+  $('#left').css({
+    'color':'#858585'
+  });
+  $('#center').css({
+    'color':'#4169e1'
+  });
+  $('#right').css({
+    'color':'#858585'
+  });
+  $('#seat1').css({
+    'display':'none'
+  });
+  $('#seat2').css({
+    'display':'inline'
+  });
+  $('#seat3').css({
+    'display':'none'
+  });
+});
+
+$('#right').click(function(){
+  $('#left').css({
+    'color':'#858585'
+  });
+  $('#center').css({
+    'color':'#858585'
+  });
+  $('#right').css({
+    'color':'#4169e1'
+  });
+  $('#seat1').css({
+    'display':'none'
+  });
+  $('#seat2').css({
+    'display':'none'
+  });
+  $('#seat3').css({
+    'display':'inline'
   });
 });

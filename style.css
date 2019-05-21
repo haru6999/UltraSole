@@ -44,12 +44,23 @@ h1 {
 *{
   margin:0 auto;
 }
-html,body,main{
+html,body{
   width: 100%;
   height:100%;
 }
+main{
+  /* padding-bottom: 76px; */
+  height: 80vh;
+}
+.logo{
+  width:50%;
+  position: absolute;
+  top:35px;
+  margin-left:25%;
+}
 .button1{
   text-align: center;
+  padding-top: 80px;
 }
 .button1 button{
   width:35%;
@@ -66,9 +77,117 @@ html,body,main{
   background-color: #9daee0;
   border:none;
 }
-.button1 p{
+.seat{
+  height: 100%;
+}
+#seat1{
+  display: inline;
+}
+#seat2{
+  display: none;
+}
+#seat3{
+  display: none;
+}
+#seat1 p{
   text-align: center;
   font-size: 12px;
   line-height: 30px;
   letter-spacing: 5px;
+  margin:15px 0px;
+}
+#autoseat{
+  display: inline;
+}
+#autoseat button{
+  width: 80%;
+  background-color: #4169e1;
+  border:none;
+  color:white;
+  margin-top: 10px;
+  margin-left: 10%;
+  line-height: 40px;
+  font-size: 20px;
+  letter-spacing: 10px;
+  padding: 3px 0px;
+}
+#manualseat{
+  display: none;
+}
+.gradation{
+  height:30px;
+  width:60%;
+  margin-left: 20% !important;
+  margin-bottom: 0px !important;
+  background: linear-gradient(90deg,#4169e1, 	#dceaf8);
+}
+.hard{
+  width:30px !important;
+  letter-spacing: 0px !important;
+  position: absolute;
+  margin :0px !important;
+  left:calc(20% - 15px);
+}
+.soft{
+  width: 30px !important;
+  letter-spacing: 0px !important;
+  position: absolute;
+  margin :0px !important;
+  left:calc(80% - 15px);
+}
+
+/* 足の画像 */
+.footimage{
+  position: relative;
+  height:50vh;
+}
+.foot{
+  width:110px;
+  height:auto;
+  position: absolute;
+  margin-top: 10px;
+}
+.lfoot{
+  left:60px;
+}
+.rfoot{
+  right:60px;
+}
+.bfoot{
+  top:175px;
+}
+
+/* footer */
+footer{
+  height: auto;
+  padding-top: 20px;
+  position: absolute;
+  bottom: 0px;
+}
+footer button{
+  padding: 10px 0px;
+  border:none;
+  border-top:solid 1px #4169e1;
+  background-color: white;
+  width:calc(100vw/3 - 3px);
+}
+footer i{
+  font-size: 3em;
+}
+.fa-shoe-prints{
+  transform: rotateZ(-90deg);
+  width:50px;
+}
+#center{
+  border-left:solid 1px #4169e1;
+  border-right:solid 1px #4169e1;
+}
+#left{
+  color:#4169e1;
+}
+#center{
+  color:#858585;
+}
+#right{
+  color:#858585;
 }

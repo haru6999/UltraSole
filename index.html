@@ -33,27 +33,50 @@
           </div>
       </div>
        -->
-      
+
       <!-- シート１ -->
-      <div class="seat seat1">
+      <div class="seat" id="seat1">
+        <img src="image/logo.png" class="logo">
         <div class="button1">
           <button id="auto">オートモード</button><button id="manual">マニュアル</button>
-          <p>次の調整まであと 100秒 </p>
         </div>
+        <div id="autoseat">
+          <p>次の調整まであと 100秒 </p>
+          <div class="footimage">
+            <img src="image/lfoot1.png" class="foot lfoot lfoot1">
+            <img src="image/rfoot1.png" class="foot rfoot rfoot1">
+          </div>
+          <button>手動で調整</button>
+        </div>
+        <div id="manualseat">
+          <p>選択してください</p>
+          <div class="footimage">
+            <img src="image/lft1.png" class="foot lfoot tfoot lft1">
+            <img src="image/lfb1.png" class="foot lfoot bfoot lfb1">
+            <img src="image/rft1.png" class="foot rfoot tfoot rft1">
+            <img src="image/rfb1.png" class="foot rfoot bfoot rfb1">
+          </div>
+          <p class="gradation"></p>
+          <div>
+            <p class="hard">hard</p>
+            <p class="soft">soft</p>
+          </div>
+        </div>
+      
       </div>
        
       <!-- シート２ -->
-      <div class="seat seat2">
-
+      <div class="seat" id="seat2">
+        <img src="image/logo.png" class="logo">
       </div>
       <!-- シート３ -->
-      <div class="seat seat3">
-
+      <div class="seat" id="seat3">
+        <img src="image/logo.png" class="logo">
       </div>
 
     </main>
     <footer>
-      <button id="left"><i class="fas fa-shoe-prints"></i></button><button id="center"></button><button id="right"></button>
+      <button id="left"><i class="fas fa-shoe-prints"></i></button><button id="center"><i class="fas fa-list"></i></button><button id="right"><i class="fas fa-chart-line"></i></button>
     </footer>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="index.js"></script>
