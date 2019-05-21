@@ -25,6 +25,8 @@ new Vue({
 var auto = $(document.getElementById('auto'));
 var manual = $(document.getElementById('manual'));
 
+
+// シート１
 $('#auto').click(function(){
   $('#auto').css({
     'background-color': '#4169e1'
@@ -114,6 +116,17 @@ $('#right').click(function(){
     'display':'none'
   });
   $('#seat3').css({
+    'display':'inline'
+  });
+});
+
+
+// シート２
+$('#mylist').click(function(){
+  $('.input').css({
+    'display':'none'
+  });
+  $('.mylist2').css({
     'display':'inline'
   });
 });
