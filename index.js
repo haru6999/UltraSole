@@ -22,10 +22,6 @@ new Vue({
     }
   })
 
-var auto = $(document.getElementById('auto'));
-var manual = $(document.getElementById('manual'));
-
-
 // シート１
 $('#auto').click(function(){
   $('#auto').css({
