@@ -181,7 +181,7 @@ main{
 /* 足の画像 */
 .footimage{
   position: relative;
-  height:50vh;
+  height:60%;
 }
 .foot{
   width:110px;
