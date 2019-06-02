@@ -8,70 +8,68 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- グラフがかけるAnyChart(ライブラリ) -->
+    <script src="https://cdn.anychart.com/js/latest/anychart-bundle.min.js"></script>
     <script src="index.js"></script>
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   </head>
   <body>
     <main>
+<!-- 
+        <script src="https://unpkg.com/vue"></script>
 
-      <script src="https://unpkg.com/vue"></script>
-
-      <!-- <div id="app">
-          <h1>{{ message }}</h1>
-          <div class="soles">
-      
-          <div class="sole" v-for="sole in soles">
-              <div class="info">
-              <div class="title"><i class="sole icon"></i> {{sole.time}}</div>
-              <div class="review">{{sole.value}}</div>
-              </div>
-              <div class="rate">
-              <div class="ui statistics">
-                  <div class="statistic">
-                  <div class="value"><i class="star icon"></i> {{sole.value}} </div>
-                  </div>
-              </div>
-              </div>
-          </div>
-      
-          </div>
-      </div>
+        <div id="app">
+            
+            <div v-for="(value1,index) in values1">
+                <div v-if="index===values1.length-1">
+                    <div v-for="(value2,index) in values2">
+                        <div v-if="index===values2.length-1">
+                            <div v-if="value1.value1<=value2.value2">
+                                <div class="value1">value1の方が小さい</div>
+                            </div>
+                            <div v-if="value1.value1>=value2.value2">
+                                <div class="value2">value2の方が小さい</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
        -->
 
       <!-- シート１ -->
       <div class="seat" id="seat1">
-        <img src="image/logo.png" class="logo">
-        <div class="button1">
-          <button id="auto">オートモード</button><button id="manual">マニュアル</button>
+        <div class="logo">
+          <img src="image/logo.png">
         </div>
-        <div id="autoseat">
-          <p>次の調整まであと 100秒 </p>
-          <div class="footimage">
-            <img src="image/lfoot1.png" class="foot lfoot lfoot1">
-            <img src="image/rfoot1.png" class="foot rfoot rfoot1">
-          </div>
-          <button>手動で調整</button>
+        <div class="coment">
+            <p id="sendcoments">
+                <img src="image/attention.png">
+                内股になっていませんか？<br>
+                外側を意識して使いましょう。
+            </p>
         </div>
-        <div id="manualseat">
-          <p>選択してください</p>
-          <div class="footimage">
-            <img src="image/lft1.png" class="foot lfoot tfoot lft1">
-            <img src="image/lfb1.png" class="foot lfoot bfoot lfb1">
-            <img src="image/rft1.png" class="foot rfoot tfoot rft1">
-            <img src="image/rfb1.png" class="foot rfoot bfoot rfb1">
-          </div>
-          <p class="gradation"></p>
-          <div>
-            <p class="hard">hard</p>
-            <p class="soft">soft</p>
-          </div>
+        <p class="about">詳しく見る >></p>
+        <div class="footimage">
+            <img src="image/l1.png" class="foot l1 value1">
+            <img src="image/value1.png" class="foot l1 yellow">
+            <img src="image/l2.png" class="foot l2">
+            <img src="image/l3.png" class="foot l3">
+            <img src="image/l4.png" class="foot l4 value2">
+            <img src="image/value2.png" class="foot l4 yellow">
+            <img src="image/r1.png" class="foot r1">
+            <img src="image/r2.png" class="foot r2">
+            <img src="image/r3.png" class="foot r3">
+            <img src="image/r4.png" class="foot r4">
         </div>
-      
       </div>
        
       <!-- シート２ -->
       <div class="seat" id="seat2">
-        <img src="image/logo.png" class="logo">
+        <div class="logo">
+          <img src="image/logo.png">
+        </div>
         <p class="subtitle">マイリスト</p>
 
         <div class="input">
@@ -83,22 +81,51 @@
 
         <div class="mylist2">
           <p>スニーカー</p>
+          <i class="fas fa-angle-left" id="mylistBack"></i>
           <div class="footimage">
-            <img src="image/lft1.png" class="foot lfoot tfoot lft1">
-            <img src="image/lfb1.png" class="foot lfoot bfoot lfb1">
-            <img src="image/rft1.png" class="foot rfoot tfoot rft1">
-            <img src="image/rfb1.png" class="foot rfoot bfoot rfb1">
+            <img src="image/l1.png" class="foot lfoot l1">
+            <img src="image/l2.png" class="foot lfoot l2">
+            <img src="image/l3.png" class="foot lfoot l3">
+            <img src="image/l4.png" class="foot lfoot l4">
+          </div>
+          <div class="button2">
+            <button id="henkou">変更</button>
+            <button id="kettei">決定</button>
           </div>
         </div>
       </div>
+
       <!-- シート３ -->
       <div class="seat" id="seat3">
-        <img src="image/logo.png" class="logo">
+        <div class="logo">
+          <img src="image/logo.png">
+        </div>
+        <p class="subtitle">重心測定</p>
+
+        <div id="gravity1">
+          <p class="senntaku">選択してください</p>
+          <div class="footimage">
+            <img src="image/lft2.png" class="foot lfoot tfoot lft2">
+            <img src="image/lfb2.png" class="foot lfoot bfoot lfb2">
+            <img src="image/rft2.png" class="foot rfoot tfoot rft2">
+            <img src="image/rfb2.png" class="foot rfoot bfoot rfb2">
+          </div>
+        </div>
+
+        <div id="gravity2">
+            <p class="senntaku">2019.05.17(Fri)</p>
+            <i class="fas fa-angle-left" id="mylistBack"></i>
+
+            <!-- vue.js発動 -->
+            <div id="container">
+
+            </div>
+        </div>
       </div>
 
     </main>
     <footer>
-      <button id="left"><i class="fas fa-shoe-prints"></i></button><button id="center"><i class="fas fa-list"></i></button><button id="right"><i class="fas fa-chart-line"></i></button>
+      <button id="left"><i class="fas fa-shoe-prints"></i></button><button id="center"><i class="fas fa-bars"></i></button><button id="right"><i class="fas fa-user"></i></button>
     </footer>
     
     

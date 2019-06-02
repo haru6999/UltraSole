@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500');
-/* * {
+
+* {
   margin: 0;
   padding: 0;
 }
@@ -39,7 +40,7 @@ h1 {
     line-hetght: 48px;
     margin-bottom: 24px;
   }
-} */
+}
 
 *{
   margin:0 auto;
@@ -50,33 +51,44 @@ html,body{
 }
 main{
   /* padding-bottom: 76px; */
-  height: 80vh;
+  height: 80%;
 }
 .logo{
+  height:20%;
+}
+.logo img{
   width:50%;
   position: absolute;
   top:43px;
   margin-left:25%;
 }
 
+/* 点滅 */
+.value1{
+  animation: flash 1s infinite linear;
+}
+.value2{
+  animation: flash 1s infinite linear;
+}
+@keyframes flash {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0;}
+}
+@-webkit-keyframes flash {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+.yellow{
+  z-index:-1;
+}
+
+
+
 /* シート１ */
-.button1{
-  text-align: center;
-  padding-top: 80px;
-}
-.button1 button{
-  width:35%;
-  line-height: 20px;
-  padding: 5px 0px;
-  color:white;
-  margin-top:30px;
-}
 #auto{
   background-color: #4169e1;
-  border:none;
-}
-#manual{
-  background-color: #9daee0;
   border:none;
 }
 .seat{
@@ -91,56 +103,38 @@ main{
 #seat3{
   display: none;
 }
-#seat1 p{
+.coment{
+  width:80%;
+  background-color: white;
+  border: solid 2px #B3B3B3;
+  border-radius: 10px;
+  position: relative;
+}
+.coment img{
+  width:25px;
+  /* position: absolute; */
+}
+#sendcoments{
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 30px;
   letter-spacing: 5px;
   margin:15px 0px;
+  
 }
-#autoseat{
-  display: inline;
-}
-#autoseat button{
-  width: 80%;
-  background-color: #4169e1;
-  border:none;
-  color:white;
-  margin-top: 10px;
-  margin-left: 10%;
-  line-height: 40px;
-  font-size: 20px;
-  letter-spacing: 10px;
-  padding: 3px 0px;
-}
-#manualseat{
-  display: none;
-}
-.gradation{
-  height:30px;
-  width:60%;
-  margin-left: 20% !important;
-  margin-bottom: 0px !important;
-  background: linear-gradient(90deg,#4169e1, 	#dceaf8);
-}
-.hard{
-  width:30px !important;
-  letter-spacing: 0px !important;
-  position: absolute;
-  margin :0px !important;
-  left:calc(20% - 15px);
-}
-.soft{
-  width: 30px !important;
-  letter-spacing: 0px !important;
-  position: absolute;
-  margin :0px !important;
-  left:calc(80% - 15px);
+.about{
+  text-align: right;
+  font-size: 12px;
+  line-height: 30px;
+  letter-spacing: 2px;
+  margin:0;
+  padding-right: 40px;
+  color:#B3B3B3;
 }
 
 /* シート２ */
 .subtitle{
-  padding-top: 110px;
+  padding-top: 40px;
   text-align: center;
   color:#4169e1;
   letter-spacing: 5px;
@@ -166,35 +160,107 @@ main{
 }
 .mylist2{
   display: none;
+  position: relative;
 }
 .mylist2 p{
   text-align: center;
   font-size: 12px;
   line-height: 30px;
   letter-spacing: 5px;
-  margin:15px 0px;
+  margin:15px 0px 15px 35%;
+  background-color: #D3D4DA;
+  width:30%;
 }
-
+.fa-angle-left{
+  position: absolute;
+  top:-85px;
+  left:30px;
+  font-size: 3em;
+  color:#dfdfdf;
+}
 /* 足の画像 */
 .footimage{
   position: relative;
   height:60%;
 }
 .foot{
-  width:110px;
+  zoom: 0.25;
   height:auto;
   position: absolute;
   margin-top: 10px;
 }
-.lfoot{
-  left:60px;
+.l1{
+  top:93px;
+  left:217px;
 }
-.rfoot{
-  right:60px;
+.l2{
+  top:93px;
+  left:427px;
 }
-.bfoot{
-  top:175px;
+.l3{
+  top:511px;
+  left:239px;
 }
+.l4{
+  top:853px;
+  left:262px;
+}
+.r1{
+  top:93px;
+  right:217px;
+}
+.r2{
+  top:93px;
+  right:427px;
+}
+.r3{
+  top:511px;
+  right:239px;
+}
+.r4{
+  top:854px;
+  right:262px;
+}
+.button2{
+  text-align: center;
+  /* padding-top: 80px; */
+}
+.button2 button{
+  width:35%;
+  line-height: 35px;
+  padding: 5px 0px;
+  color:white;
+  margin-top:20px;
+  font-size: 20px;
+}
+#henkou{
+  background-color: #4169e1;
+  border:none;
+}
+#kettei{
+  background-color: #4169e1;
+  border:none;
+}
+
+/* シート３ */
+.senntaku{
+  text-align: center;
+  font-size: 12px;
+  line-height: 30px;
+  letter-spacing: 5px;
+  margin:15px 0px;
+}
+#gravity1{
+  display: none;
+}
+#gravity2{
+  display: inline;
+}
+#container{
+  width: 100%;  
+  height:100%;
+}
+
 
 /* footer */
 footer{
@@ -206,9 +272,8 @@ footer{
 footer button{
   padding: 10px 0px;
   border:none;
-  border-top:solid 1px #4169e1;
-  background-color: white;
-  width:calc(100vw/3 - 3px);
+  width:calc(100vw/3);
+  background-color: #FFEEC7;
 }
 footer i{
   font-size: 3em;
@@ -218,15 +283,13 @@ footer i{
   width:50px;
 }
 #center{
-  border-left:solid 1px #4169e1;
-  border-right:solid 1px #4169e1;
 }
 #left{
-  color:#4169e1;
+  color:#f08b72;
 }
 #center{
-  color:#858585;
+  color:#FFFAFA;
 }
 #right{
-  color:#858585;
+  color:#FFFAFA;
 }

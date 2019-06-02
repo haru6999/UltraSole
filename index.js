@@ -1,69 +1,72 @@
 new Vue({
-    el: '#app',
-    data () {
-      return {
-        message: 'UltraSole',
-        soles: null,
-      }
-    },
-    mounted () {
-      fetch(
-        'https://script.google.com/macros/s/AKfycbzXZXE6twyHpRaZAfOgb0S1hc0EcpxrcCwleHqFZXUj_FvgXeMu/exec',
-      )
-        .then(res => res.json())
-        .then(
-        result => {
-          this.soles = result
-        },
-        error => {
-  
-        },
-      );
+  el: '#app',
+  data () {
+    return {
+      message: 'MESH',
+      values1: [],
+      values2: [],
     }
-  })
+   
+  },
+  
+  mounted () {
+    fetch(
+      'https://script.google.com/macros/s/AKfycbzXZXE6twyHpRaZAfOgb0S1hc0EcpxrcCwleHqFZXUj_FvgXeMu/exec',
+    )
+      .then(res => res.json())
+      .then(
+      result => {
+        this.values1= result
+      },
+      error => {
+
+      },
+    );
+    fetch(
+      'https://script.google.com/macros/s/AKfycbwAXqF2Idm69c508IcIu5CjW61LBplVkblIFrNVgMokNITl9VDM/exec',
+    )
+      .then(res => res.json())
+      .then(
+      result => {
+        this.values2 = result
+      },
+      error => {
+
+      },
+    );
+  },
+  
+ 
+  
+})
+
+// anychart.onDocumentLoad(function() {
+//   // create chart and set data
+//   // as Array of Arrays
+//   var chart = anychart.line()
+//   chart.data({header: ["#", "前側", "後側"],
+//     rows:[
+//     ["Winter", t.value, 7],
+//     ["Spring", 7, 9],
+//     ["Summer", 9, 12],
+//     ["Fall", 12, 15]
+//   ]});
+//   chart.title("AnyChart: Multi-Series Array of Arrays");
+//   chart.legend(true);
+//   chart.container("container").draw();
+// });
 
 
 jQuery(function($){
-// シート１
-$('#auto').click(function(){
-  $('#auto').css({
-    'background-color': '#4169e1'
-  });
-  $('#manual').css({
-    'background-color': '#9daee0'
-  });
-  $('#autoseat').css({
-    'display':'inline'
-  });
-  $('#manualseat').css({
-    'display':'none'
-  });
-});
-
-$('#manual').click(function(){
-  $('#auto').css({
-    'background-color': '#9daee0'
-  });
-  $('#manual').css({
-    'background-color': '#4169e1'
-  });
-  $('#autoseat').css({
-    'display':'none'
-  });
-  $('#manualseat').css({
-    'display':'inline'
-  });
-});
-
 $('#left').click(function(){
   $('#left').css({
-    'color':'#4169e1'
+    'color':'#f08b72'
   });
   $('#center').css({
-    'color':'#858585'
+    'color':'#FFFAFA'
   });
   $('#right').css({
-    'color':'#858585'
+    'color':'#FFFAFA'
   });
   $('#seat1').css({
     'display':'inline'
@@ -78,13 +81,13 @@ $('#left').click(function(){
 
 $('#center').click(function(){
   $('#left').css({
-    'color':'#858585'
+    'color':'#FFFAFA'
   });
   $('#center').css({
-    'color':'#4169e1'
+    'color':'#f08b72'
   });
   $('#right').css({
-    'color':'#858585'
+    'color':'#FFFAFA'
   });
   $('#seat1').css({
     'display':'none'
@@ -99,13 +102,13 @@ $('#center').click(function(){
 
 $('#right').click(function(){
   $('#left').css({
-    'color':'#858585'
+    'color':'#FFFAFA'
   });
   $('#center').css({
-    'color':'#858585'
+    'color':'#FFFAFA'
   });
   $('#right').css({
-    'color':'#4169e1'
+    'color':'#f08b72'
   });
   $('#seat1').css({
     'display':'none'
@@ -129,5 +132,32 @@ $('#mylist').click(function(){
   });
 });
 
+$('#mylistBack').click(function(){
+  $('.input').css({
+    'display':'inline'
+  });
+  $('.mylist2').css({
+    'display':'none'
+  });
+});
+
+// シート３
+$('').click(function(){
+  $('#gravity1').css({
+    'display':'none'
+  });
+  $('#gravity2').css({
+    'display':'inline'
+  });
+});
+
+$('#gravity2').click(function(){
+  $('#gravity1').css({
+    'display':'inline'
+  });
+  $('#gravity2').css({
+    'display':'none'
+  });
+});
 
 });
