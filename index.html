@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>UltraSole</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
+    
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- グラフがかけるAnyChart(ライブラリ) -->
     <script src="https://cdn.anychart.com/js/latest/anychart-bundle.min.js"></script>
-    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
+    
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   </head>
   <body>
     <main>
-<!-- 
-        <script src="https://unpkg.com/vue"></script>
+
+        <!-- <script src="https://unpkg.com/vue"></script>
 
         <div id="app">
-            
             <div v-for="(value1,index) in values1">
                 <div v-if="index===values1.length-1">
                     <div v-for="(value2,index) in values2">
@@ -34,7 +34,6 @@
                     </div>
                 </div>
             </div>
-    
         </div>
        -->
 
@@ -52,11 +51,40 @@
         </div>
         <p class="about">詳しく見る >></p>
         <div class="footimage">
-            <img src="image/l1.png" class="foot l1 value1">
+            <script src="https://unpkg.com/vue"></script>
+            <div id="app">
+                <div v-for="(value1,index) in values1">
+                    <div v-if="index===values1.length-1">
+                        <div v-for="(value2,index) in values2">
+                            <div v-if="index===values2.length-1">
+                                <div v-if="value1.value1<=value2.value2">
+                                    <div class="value1">
+                                        <img src="image/l1.png" class="foot l1 flash">
+                                        <img src="image/l4.png" class="foot l4">
+                                    </div>
+                                </div>
+                                <div v-if="value1.value1>=value2.value2">
+                                    <div class="value2">
+                                        <img src="image/l1.png" class="foot l1">
+                                        <img src="image/l4.png" class="foot l4 flash">
+                                    </div>
+                                </div>
+                                <div v-if="value1.value1===value2.value2">
+                                        <div class="value2">
+                                            <img src="image/l1.png" class="foot l1">
+                                            <img src="image/l4.png" class="foot l4">
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <img src="image/l1.png" class="foot l1"> -->
             <img src="image/value1.png" class="foot l1 yellow">
             <img src="image/l2.png" class="foot l2">
             <img src="image/l3.png" class="foot l3">
-            <img src="image/l4.png" class="foot l4 value2">
+            <!-- <img src="image/l4.png" class="foot l4"> -->
             <img src="image/value2.png" class="foot l4 yellow">
             <img src="image/r1.png" class="foot r1">
             <img src="image/r2.png" class="foot r2">
@@ -128,6 +156,6 @@
       <button id="left"><i class="fas fa-shoe-prints"></i></button><button id="center"><i class="fas fa-bars"></i></button><button id="right"><i class="fas fa-user"></i></button>
     </footer>
     
-    
+    <script src="index.js"></script>
   </body>
 </html>

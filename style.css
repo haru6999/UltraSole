@@ -64,10 +64,7 @@ main{
 }
 
 /* 点滅 */
-.value1{
-  animation: flash 1s infinite linear;
-}
-.value2{
+.flash{
   animation: flash 1s infinite linear;
 }
 @keyframes flash {
