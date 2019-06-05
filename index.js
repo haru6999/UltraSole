@@ -131,7 +131,7 @@ $('#turn21,#turn22,#turn23,#turn24').click(function(){
     'display':'none'
   });
 });
-$('#toPage21').click(function(){
+$('#toPage21,#left22').click(function(){
   $('#page2').css({
     'display':'none'
   });
@@ -148,7 +148,7 @@ $('#toPage21').click(function(){
     'display':'none'
   });
 });
-$('#toPage22').click(function(){
+$('#toPage22,#right21,#left23').click(function(){
   $('#page2').css({
     'display':'none'
   });
@@ -165,7 +165,7 @@ $('#toPage22').click(function(){
     'display':'none'
   });
 });
-$('#toPage23').click(function(){
+$('#toPage23,#right22,#left24').click(function(){
   $('#page2').css({
     'display':'none'
   });
@@ -182,7 +182,7 @@ $('#toPage23').click(function(){
     'display':'none'
   });
 });
-$('#toPage24').click(function(){
+$('#toPage24,#right23').click(function(){
   $('#page2').css({
     'display':'none'
   });
@@ -210,7 +210,7 @@ $('#gear').click(function(){
   });
 });
 
-$('#topage3').click(function(){
+$('#topage3,#turn3').click(function(){
   $('#profile').css({
     'display':'inline'
   });
