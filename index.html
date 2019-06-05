@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>UltraSole</title>
+    <link rel="shortcut icon" href="image/icon.png">
     <link rel="stylesheet" href="style.css">
     
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
@@ -38,116 +39,149 @@
        -->
 
       <!-- シート１ -->
-      <div class="seat" id="seat1">
-        <div class="logo">
-          <img src="image/logo.png">
-        </div>
-        <div class="coment">
-            <p id="sendcoments">
-                <img src="image/attention.png">
-                内股になっていませんか？<br>
-                外側を意識して使いましょう。
-            </p>
-        </div>
-        <p class="about">詳しく見る >></p>
-        <div class="footimage">
-            <script src="https://unpkg.com/vue"></script>
-            <div id="app">
-                <div v-for="(value1,index) in values1">
-                    <div v-if="index===values1.length-1">
-                        <div v-for="(value2,index) in values2">
-                            <div v-if="index===values2.length-1">
-                                <div v-if="value1.value1<=value2.value2">
-                                    <div class="value1">
-                                        <img src="image/l1.png" class="foot l1 flash">
-                                        <img src="image/l4.png" class="foot l4">
-                                    </div>
-                                </div>
-                                <div v-if="value1.value1>=value2.value2">
-                                    <div class="value2">
-                                        <img src="image/l1.png" class="foot l1">
-                                        <img src="image/l4.png" class="foot l4 flash">
-                                    </div>
-                                </div>
-                                <div v-if="value1.value1===value2.value2">
-                                        <div class="value2">
-                                            <img src="image/l1.png" class="foot l1">
+    <div class="seat" id="seat1">
+        <div id="top">
+            <div class="logo">
+                <img src="image/logo.png">
+            </div>
+            <div class="coment">
+                <p id="sendcoments">
+                    <img src="image/attention.png">
+                    かかとだけで着地していませんか？<br>
+                    指・指の付け根も意識しましょう。
+                </p>
+            </div>
+            <p id="about">詳しく見る >></p>
+            <div class="footimage">
+                <script src="https://unpkg.com/vue"></script>
+                <div id="app">
+                    <div v-for="(value1,index) in values1">
+                        <div v-if="index===values1.length-1">
+                            <div v-for="(value2,index) in values2">
+                                <div v-if="index===values2.length-1">
+                                    <div v-if="value1.value1<=value2.value2">
+                                        <div class="value1">
+                                            <img src="image/l1.png" class="foot l1 flash">
                                             <img src="image/l4.png" class="foot l4">
                                         </div>
                                     </div>
+                                    <div v-if="value1.value1>=value2.value2">
+                                        <div class="value2">
+                                            <img src="image/l1.png" class="foot l1">
+                                            <img src="image/l4.png" class="foot l4 flash">
+                                        </div>
+                                    </div>
+                                    <div v-if="value1.value1===value2.value2">
+                                            <div class="value2">
+                                                <img src="image/l1.png" class="foot l1">
+                                                <img src="image/l4.png" class="foot l4">
+                                            </div>
+                                        </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- <img src="image/l1.png" class="foot l1"> -->
+                <img src="image/value1.png" class="foot l1 yellow">
+                <img src="image/l2.png" class="foot l2">
+                <img src="image/l3.png" class="foot l3">
+                <!-- <img src="image/l4.png" class="foot l4"> -->
+                <img src="image/value2.png" class="foot l4 yellow">
+                <img src="image/r1.png" class="foot r1">
+                <img src="image/r2.png" class="foot r2">
+                <img src="image/r3.png" class="foot r3">
+                <img src="image/r4.png" class="foot r4">
             </div>
-            <!-- <img src="image/l1.png" class="foot l1"> -->
-            <img src="image/value1.png" class="foot l1 yellow">
-            <img src="image/l2.png" class="foot l2">
-            <img src="image/l3.png" class="foot l3">
-            <!-- <img src="image/l4.png" class="foot l4"> -->
-            <img src="image/value2.png" class="foot l4 yellow">
-            <img src="image/r1.png" class="foot r1">
-            <img src="image/r2.png" class="foot r2">
-            <img src="image/r3.png" class="foot r3">
-            <img src="image/r4.png" class="foot r4">
         </div>
-      </div>
+        <div id="detail">
+            <p id="turn" class="turn">←</p>
+            <img src="image/detail.png">
+        </div>
+    </div>
+        
        
       <!-- シート２ -->
       <div class="seat" id="seat2">
-        <div class="logo">
-          <img src="image/logo.png">
-        </div>
-        <p class="subtitle">マイリスト</p>
+        <div id="page2">
+            <img src="image/page2.png">
+            <div class="button">
+                <button id="toPage21" class="hokousuu">
+                    <p>あなたの歩行点数<br><span style="font-size: 67px;color:white;">70</span><span style="font-size: 14px">点</span></p>
+                </button>
+                <button id="toPage22">
+                    <p class="hosuu">歩数</p>
+                    <p><span class="point">100,230</span><span class="ho">歩</span></p>
+                </button>
+                <button id="toPage23">
+                    <p class="hosuu">歩行距離</p>
+                    <p><span class="point">13.5</span><span class="ho">km</span></p>
+                </button>
+                <button id="toPage24">
+                    <p class="hosuu">体重</p>
+                    <p><span class="point">63</span><span class="ho">kg</span></p>
+                </button>
 
-        <div class="input">
-          <input type="text" value="スニーカー" id="mylist">
-          <input type="text" value="革靴">
-          <input type="text" value="革靴２">
-          <input type="text" value="＋" style="color:white;">
+            </div>
         </div>
-
-        <div class="mylist2">
-          <p>スニーカー</p>
-          <i class="fas fa-angle-left" id="mylistBack"></i>
-          <div class="footimage">
-            <img src="image/l1.png" class="foot lfoot l1">
-            <img src="image/l2.png" class="foot lfoot l2">
-            <img src="image/l3.png" class="foot lfoot l3">
-            <img src="image/l4.png" class="foot lfoot l4">
-          </div>
-          <div class="button2">
-            <button id="henkou">変更</button>
-            <button id="kettei">決定</button>
-          </div>
+        <div id="page21">
+            <img src="image/page21.png">
+            <p id="turn21" class="turn">←</p>
         </div>
+        <div id="page22">
+            <img src="image/page22.png">
+            <p id="turn22" class="turn">←</p>
+        </div>
+        <div id="page23">
+            <img src="image/page23.png">
+            <p id="turn23" class="turn">←</p>
+        </div>
+        <div id="page24">
+            <img src="image/page24.png">
+            <p id="turn24" class="turn">←</p>
+        </div>
+        
       </div>
 
       <!-- シート３ -->
       <div class="seat" id="seat3">
-        <div class="logo">
-          <img src="image/logo.png">
+        <div id="profile">
+            <img src="image/page3.png">
+            <i class="fas fa-cog" id="gear"></i>
         </div>
-        <p class="subtitle">重心測定</p>
-
-        <div id="gravity1">
-          <p class="senntaku">選択してください</p>
-          <div class="footimage">
-            <img src="image/lft2.png" class="foot lfoot tfoot lft2">
-            <img src="image/lfb2.png" class="foot lfoot bfoot lfb2">
-            <img src="image/rft2.png" class="foot rfoot tfoot rft2">
-            <img src="image/rfb2.png" class="foot rfoot bfoot rfb2">
-          </div>
-        </div>
-
-        <div id="gravity2">
-            <p class="senntaku">2019.05.17(Fri)</p>
-            <i class="fas fa-angle-left" id="mylistBack"></i>
-
-            <!-- vue.js発動 -->
-            <div id="container">
-
+        <div id="configuration">
+            <img src="image/page31.png" class="image3">
+            <div class="checkBox">
+                <ul>
+                    <li><img src="image/no.png" id="check[0]" onclick="check(this)">  腰痛</li>
+                    <li><img src="image/no.png" id="check[1]" onclick="check(this)">  膝痛</li>
+                    <li><img src="image/no.png" id="check[2]" onclick="check(this)">  肩こり</li>
+                    <li><img src="image/no.png" id="check[3]" onclick="check(this)">  扁平足</li>
+                    <li><img src="image/no.png" id="check[4]" onclick="check(this)">  外反母趾</li>
+                    <li><img src="image/no.png" id="check[5]" onclick="check(this)">  X脚・O脚</li>
+                    <li><img src="image/no.png" id="check[6]" onclick="check(this)">  特になし</li>
+                </ul>
+                <script>
+                    var pics_src = new Array("image/no.png","image/yes.png");
+                    var num = [0,0,0,0,0,0,0];
+                    function check(ele){
+                        for(var i=0;i<7;i++){
+                            if(ele.id=="check["+i+"]"){
+                                if (num[i] == 1) {
+                                    num[i] = 0;
+                                }
+                                else {
+                                    num[i] ++;
+                                }
+                                document.getElementById("check["+i+"]").src=pics_src[num[i]];
+                            }
+                        }
+                    }
+                </script>
             </div>
+            <button id="topage3">
+                登録完了
+            </button>
         </div>
       </div>
 

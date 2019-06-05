@@ -40,23 +40,6 @@ new Vue({
   
 })
 
-// anychart.onDocumentLoad(function() {
-//   // create chart and set data
-//   // as Array of Arrays
-//   var chart = anychart.line()
-//   chart.data({header: ["#", "前側", "後側"],
-//     rows:[
-//     ["Winter", t.value, 7],
-//     ["Spring", 7, 9],
-//     ["Summer", 9, 12],
-//     ["Fall", 12, 15]
-//   ]});
-//   chart.title("AnyChart: Multi-Series Array of Arrays");
-//   chart.legend(true);
-//   chart.container("container").draw();
-// });
-
-
 jQuery(function($){
 $('#left').click(function(){
   $('#left').css({
@@ -121,43 +104,121 @@ $('#right').click(function(){
   });
 });
 
-
-// シート２
-$('#mylist').click(function(){
-  $('.input').css({
+// シート１
+$('#about').click(function(){
+  $('#top').css({
     'display':'none'
   });
-  $('.mylist2').css({
+  $('#detail').css({
     'display':'inline'
   });
 });
-
-$('#mylistBack').click(function(){
-  $('.input').css({
+$('#turn').click(function(){
+  $('#top').css({
     'display':'inline'
   });
-  $('.mylist2').css({
+  $('#detail').css({
     'display':'none'
+  });
+});
+
+// シート２
+$('#turn21,#turn22,#turn23,#turn24').click(function(){
+  $('#page2').css({
+    'display':'inline'
+  });
+  $('#page21,#page22,#page23,#page24').css({
+    'display':'none'
+  });
+});
+$('#toPage21').click(function(){
+  $('#page2').css({
+    'display':'none'
+  });
+  $('#page21').css({
+    'display':'inline'
+  });
+  $('#page22').css({
+    'display':'none'
+  });
+  $('#page23').css({
+    'display':'none'
+  });
+  $('#page24').css({
+    'display':'none'
+  });
+});
+$('#toPage22').click(function(){
+  $('#page2').css({
+    'display':'none'
+  });
+  $('#page21').css({
+    'display':'none'
+  });
+  $('#page22').css({
+    'display':'inline'
+  });
+  $('#page23').css({
+    'display':'none'
+  });
+  $('#page24').css({
+    'display':'none'
+  });
+});
+$('#toPage23').click(function(){
+  $('#page2').css({
+    'display':'none'
+  });
+  $('#page21').css({
+    'display':'none'
+  });
+  $('#page22').css({
+    'display':'none'
+  });
+  $('#page23').css({
+    'display':'inline'
+  });
+  $('#page24').css({
+    'display':'none'
+  });
+});
+$('#toPage24').click(function(){
+  $('#page2').css({
+    'display':'none'
+  });
+  $('#page21').css({
+    'display':'none'
+  });
+  $('#page22').css({
+    'display':'none'
+  });
+  $('#page23').css({
+    'display':'none'
+  });
+  $('#page24').css({
+    'display':'inline'
   });
 });
 
 // シート３
-$('').click(function(){
-  $('#gravity1').css({
+$('#gear').click(function(){
+  $('#profile').css({
     'display':'none'
   });
-  $('#gravity2').css({
+  $('#configuration').css({
     'display':'inline'
   });
 });
 
-$('#gravity2').click(function(){
-  $('#gravity1').css({
+$('#topage3').click(function(){
+  $('#profile').css({
     'display':'inline'
   });
-  $('#gravity2').css({
+  $('#configuration').css({
     'display':'none'
   });
 });
 
+
 });
+
