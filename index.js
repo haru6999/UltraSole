@@ -131,7 +131,7 @@ $('#turn21,#turn22,#turn23,#turn24').click(function(){
     'display':'none'
   });
 });
-$('#toPage21,#left22').click(function(){
+$('#toPage21,#left22,#right24').click(function(){
   $('#page2').css({
     'display':'none'
   });
@@ -182,7 +182,7 @@ $('#toPage23,#right22,#left24').click(function(){
     'display':'none'
   });
 });
-$('#toPage24,#right23').click(function(){
+$('#toPage24,#right23,#left21').click(function(){
   $('#page2').css({
     'display':'none'
   });

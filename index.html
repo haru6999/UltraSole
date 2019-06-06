@@ -51,8 +51,8 @@
             <div class="coment">
                 <p id="sendcoments">
                     <img src="image/attention.png">
-                    かかとだけで着地していませんか？<br>
-                    指・指の付け根も意識しましょう。
+                    脚をまっすぐ伸ばしてかかとで<br>着地していませんか？<br>
+                    指と指の付け根の二点も平等に<br>体重をかけて歩きましょう。
                 </p>
             </div>
             <p id="about">詳しく見る >></p>
@@ -63,39 +63,60 @@
                         <div v-if="index===values1.length-1">
                             <div v-for="(value2,index) in values2">
                                 <div v-if="index===values2.length-1">
-                                    <div v-if="value1.value1<=value2.value2">
-                                        <div class="value1">
-                                            <img src="image/l1.png" class="foot l1 flash">
-                                            <img src="image/l4.png" class="foot l4">
+                                    <div v-if="value1.value1<=1.53">
+                                        <div class="value12">
+                                            <img src="image/l1.png" class="foot l1 flashG" >
+                                            <img src="image/value12.png" class="foot l1 green">
                                         </div>
                                     </div>
-                                    <div v-if="value1.value1>=value2.value2">
-                                        <div class="value2">
+                                    <div v-if="value1.value1>=1.7">
+                                        <div class="value12">
+                                            <img src="image/l1.png" class="foot l1 flashR" >
+                                            <img src="image/value11.png" class="foot l1 red">
+                                        </div>
+                                    </div>
+                                    <div v-if="value2.value2<=1.53">
+                                        <div class="value22">
+                                            <img src="image/l6.png" class="foot l6 flashG" >
+                                            <img src="image/value22.png" class="foot l6 green">
+                                        </div>
+                                    </div>
+                                    <div v-if="value2.value2>=1.7">
+                                        <div class="value21">
+                                            <img src="image/l6.png" class="foot l6 flashR" >
+                                            <img src="image/value21.png" class="foot l6 red">
+                                        </div>
+                                    </div>
+
+                                    <div v-if="value1.value1<1.7 && value1.value1>1.53">
+                                        <div class="value12">
                                             <img src="image/l1.png" class="foot l1">
-                                            <img src="image/l4.png" class="foot l4 flash">
                                         </div>
                                     </div>
-                                    <div v-if="value1.value1===value2.value2">
-                                            <div class="value2">
-                                                <img src="image/l1.png" class="foot l1">
-                                                <img src="image/l4.png" class="foot l4">
-                                            </div>
+                                    <div v-if="value2.value2<1.7  && value2.value2>1.53">
+                                        <div class="value22">
+                                            <img src="image/l6.png" class="foot l6">
                                         </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
                 <!-- <img src="image/l1.png" class="foot l1"> -->
-                <img src="image/value1.png" class="foot l1 yellow">
                 <img src="image/l2.png" class="foot l2">
                 <img src="image/l3.png" class="foot l3">
-                <!-- <img src="image/l4.png" class="foot l4"> -->
-                <img src="image/value2.png" class="foot l4 yellow">
+                <img src="image/l4.png" class="foot l4">
+                <img src="image/l5.png" class="foot l5">
+                <!-- <img src="image/l6.png" class="foot l6"> -->
+
                 <img src="image/r1.png" class="foot r1">
                 <img src="image/r2.png" class="foot r2">
                 <img src="image/r3.png" class="foot r3">
                 <img src="image/r4.png" class="foot r4">
+                <img src="image/r5.png" class="foot r5">
+                <img src="image/r6.png" class="foot r6">
             </div>
         </div>
         <div id="detail">
@@ -130,24 +151,26 @@
         </div>
         <div id="page21">
             <img src="image/page21.png" class="seat2Img">
-            <img src="image/toRight.png" id="right21" class="toRight" onclick="to(this)">
+            <img src="image/toLeft.png" id="left21" class="toLeft">
+            <img src="image/toRight.png" id="right21" class="toRight">
             <p id="turn21" class="turn">←</p>
         </div>
         <div id="page22">
             <img src="image/page22.png" class="seat2Img">
-            <img src="image/toLeft.png" id="left22" class="toLeft" onclick="to(this)">
-            <img src="image/toRight.png" id="right22" class="toRight" onclick="to(this)">
+            <img src="image/toLeft.png" id="left22" class="toLeft">
+            <img src="image/toRight.png" id="right22" class="toRight">
             <p id="turn22" class="turn">←</p>
         </div>
         <div id="page23">
             <img src="image/page23.png" class="seat2Img">
-            <img src="image/toLeft.png" id="left23" class="toLeft" onclick="to(this)">
-            <img src="image/toRight.png" id="right23" class="toRight" onclick="to(this)">
+            <img src="image/toLeft.png" id="left23" class="toLeft">
+            <img src="image/toRight.png" id="right23" class="toRight">
             <p id="turn23" class="turn">←</p>
         </div>
         <div id="page24">
             <img src="image/page24.png" class="seat2Img">
-            <img src="image/toLeft.png" id="left24" class="toLeft" onclick="to(this)">
+            <img src="image/toLeft.png" id="left24" class="toLeft">
+            <img src="image/toRight.png" id="right24" class="toRight">
             <p id="turn24" class="turn">←</p>
         </div>
       </div>

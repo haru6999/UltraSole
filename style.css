@@ -57,30 +57,45 @@ main{
   height:20%;
 }
 .logo img{
-  width:30%;
+  width:40%;
   position: absolute;
   top:43px;
-  margin-left:35%;
+  margin-left:30%;
 }
 
 /* 点滅 */
-.flash{
-  animation: flash 1s infinite linear;
+.flashG{
+  animation: flashG 1s infinite linear;
 }
-@keyframes flash {
+.flashR{
+  animation: flashR 1s infinite linear;
+}
+@keyframes flashG {
   0% { opacity: 0; }
   50% { opacity: 1; }
   100% { opacity: 0;}
 }
-@-webkit-keyframes flash {
+@-webkit-keyframes flashG {
   0% { opacity: 0; }
   50% { opacity: 1; }
   100% { opacity: 0; }
 }
-.yellow{
+@keyframes flashR {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0;}
+}
+@-webkit-keyframes flashR {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+.red{
   z-index:-1;
 }
-
+.green{
+  z-index:-2;
+}
 
 
 /* シート１ */
@@ -119,10 +134,10 @@ main{
 }
 #sendcoments{
   text-align: center;
-  font-size: 12px;
-  line-height: 30px;
+  font-size: 11px;
+  line-height: 17px;
   letter-spacing: 3px;
-  margin:15px 0px;
+  margin:10px 0px 17px 0px;
   
 }
 #about{
@@ -142,9 +157,10 @@ main{
   color:#B3B3B3;
 }
 #detail img{
-  width:68%;
-  margin-left: 16%;
+  width:65%;
+  margin-left: 17.5%;
   margin-top: 35px;
+  margin-bottom: 70px;
 }
 
 /* 足の画像 */
@@ -159,36 +175,52 @@ main{
   margin-top: 10px;
 }
 .l1{
-  top:93px;
-  left:217px;
+  top:119px;
+  left:254px;
 }
 .l2{
-  top:93px;
-  left:427px;
+  top:354px;
+  left:256px;
 }
 .l3{
-  top:511px;
-  left:239px;
+  top:330px;
+  left:481px;
 }
 .l4{
-  top:853px;
-  left:262px;
+  top:604px;
+  left:277px;
+}
+.l5{
+  top:576px;
+  left:480px;
+}
+.l6{
+  top:938px;
+  left:317px;
 }
 .r1{
-  top:93px;
-  right:217px;
+  top:119px;
+  right:249px;
 }
 .r2{
-  top:93px;
-  right:427px;
+  top:351px;
+  right:253px;
 }
 .r3{
-  top:511px;
-  right:239px;
+  top:330px;
+  right:475px;
 }
 .r4{
-  top:854px;
-  right:262px;
+  top:604px;
+  right:272px;
+}
+.r5{
+  top:576px;
+  right:475px;
+}
+.r6{
+  top:938px;
+  right:314px;
 }
 
 /* シート２ */
