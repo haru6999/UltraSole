@@ -34,10 +34,7 @@ new Vue({
 
       },
     );
-  },
-  
- 
-  
+  }, 
 })
 
 jQuery(function($){
